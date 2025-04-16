@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KQuesto Navigation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .nav-container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        h1 span {
+            color: #0077cc;
+        }
+
+        h1 .circle-q {
+            border: 2px solid #0077cc;
+            border-radius: 50%;
+            padding: 2px 8px;
+            margin: 0 2px;
+            display: inline-block;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            background: #0077cc;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px 0;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 119, 204, 0.2);
+        }
+
+        .nav-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 119, 204, 0.35);
+        }
+
+        .nav-link i {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h1>Welcome to <span>K<span class="circle-q">Q</span>uesto</span></h1>
+        <a href="{{ url_for('project_info') }}" class="nav-link"><i class="fa-regular fa-file-lines"></i> Project Info</a>
+        <a href="{{ url_for('project_outputs') }}" class="nav-link"><i class="fa-solid fa-chart-column"></i> Project Outputs</a>
+        <a href="{{ url_for('dashboard') }}" class="nav-link"><i class="fa-solid fa-chart-line"></i> Live Dashboard</a>
+        <a href="{{ url_for('logout') }}" class="nav-link" style="background: #f39c12;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</body>
+</html>

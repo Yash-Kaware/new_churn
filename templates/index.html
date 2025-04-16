@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .plot {
+            width: 100%;
+            height: 400px;
+        }
+        #tree {
+            white-space: pre-wrap;
+            font-family: monospace;
+            overflow-x: auto;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Customer Churn Dashboard</h1>
+    <div class="container">
+        <div class="card"><div id="heatmap" class="plot">Loading...</div></div>
+        <div class="card"><div id="time-distribution" class="plot">Loading...</div></div>
+        <div class="card"><div id="pageviews" class="plot">Loading...</div></div>
+        <div class="card"><div id="referral" class="plot">Loading...</div></div>
+        <div class="card"><div id="stacked-bar" class="plot">Loading...</div></div>
+        <div class="card"><div id="boxplot" class="plot">Loading...</div></div>
+        <div class="card"><pre id="tree">Loading decision tree...</pre></div>
+        <div class="card"><div id="feature-importance" class="plot">Loading...</div></div>
+    </div>
+    <footer>⏱ Updated every second with real-time data</footer>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

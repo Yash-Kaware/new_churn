@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Info | Customer Churn ML System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e0f7fa;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    .header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      font-size: 2.5rem;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffff44;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      box-shadow: 0 0 15px #00ffff22;
+    }
+
+    .info-card h2 {
+      color: #00e6e6;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .info-card p, .info-card ul {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .glow-text {
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff, 0 0 20px #00ffff33;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .team-card, .guide-card {
+      background: #0e1b2a;
+      padding: 20px;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 0 10px #00ffff55;
+      text-align: center;
+    }
+
+    .guide-card {
+      background: #1a2635;
+    }
+
+    .team-card h3, .guide-card h3 {
+      color: #00ffff;
+      margin: 10px 0;
+    }
+
+    .guide-card h3 {
+      color: #66ffe0;
+    }
+
+    .guide-card p {
+      color: #aaa;
+    }
+
+    .team-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00e6e6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: #00ffff;
+      font-size: 1.4rem;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      animation: shake3856 0.3s linear infinite both;
+    }
+
+    @keyframes shake3856 {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="glow-text">Customer Churn Prediction System</h1>
+    <p>Using Machine Learning Algorithms for Educational Institutions</p>
+  </div>
+
+  <div class="info-card">
+    <h2>📘 Project Overview</h2>
+    <p>
+      This system predicts student churn using machine learning models like Decision Trees and Random Forest.
+      It empowers educational institutions to identify at-risk students early and apply targeted interventions.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Predict likelihood of student churn using historical data</li>
+      <li>Use ML algorithms to classify churn vs. retain cases</li>
+      <li>Visualize model results and important features on a dashboard</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2>🛠️ Technologies Used</h2>
+    <ul>
+      <li>Python, Pandas, Sklearn, Seaborn</li>
+      <li>Decision Tree, Random Forest, Hyperparameter Tuning</li>
+      <li>Visualization Tools: Matplotlib, Plotly, Seaborn</li>
+      <li>Deployment: Flask for UI dashboard</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2>📊 Model Performance</h2>
+    <ul>
+      <li>Decision Tree F1 Score: 72%, Recall: 86%</li>
+      <li>Random Forest F1 Score: 76%, Recall: 85%</li>
+      <li>Overfitting avoided via hyperparameter tuning</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2>📈 Feature Importance (Key Factors)</h2>
+    <ul>
+      <li>🕓 Time spent on website</li>
+      <li>🔗 First interaction type (Website or App)</li>
+      <li>📋 Profile completion percentage</li>
+      <li>👥 Age, Occupation, Last activity</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2>💡 Future Enhancements</h2>
+    <ul>
+      <li>Use XGBoost and BiLSTM models for better precision</li>
+      <li>Handle imbalanced datasets using SMOTE</li>
+      <li>Implement deeper feature extraction using CNNs</li>
+      <li>Add dynamic charts and real-time insights to dashboard</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2>👥 Group Info</h2>
+    <div class="team-container">
+
+      <!-- Yash Card -->
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='yash.jpg') }}" alt="Yash Kaware" />
+        <h3>Yash Kaware</h3>
+        <p><strong>Role:</strong> Model Implementation</p>
+        <div class="social-icons">
+          <a href="mailto:yash@example.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com/yashkaware"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/yash-kaware-7a2562250/"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Sakshi Card -->
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='sakshi.jpg') }}" alt="Sakshi Jangale" />
+        <h3>Sakshi Jangale</h3>
+        <p><strong>Role:</strong> Data Preprocessing & Dashboard</p>
+        <div class="social-icons">
+          <a href="mailto:sakshi@example.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com/sakshij"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/sakshi-jangale"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Keshav Card -->
+      <div class="team-card">
+        <img src="{{ url_for('static', filename='keshav.jpg') }}" alt="Keshav Bhattar" />
+        <h3>Keshav Bhattar</h3>
+        <p><strong>Role:</strong> ML Evaluation & Results</p>
+        <div class="social-icons">
+          <a href="mailto:keshav@example.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://instagram.com/keshavb"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/keshav-bhattar"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Guide Card -->
+      <div class="guide-card">
+        <h3>Dr. C. G. Patil</h3>
+        <p><strong>Role:</strong> Project Guide</p>
+        <p><strong>Department:</strong> E&TC, SKNCOE</p>
+        <p>Social links not available</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    Developed by: Yash, Sakshi, Keshav | Guided by Dr. C.G. Patil | © 2025
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction Outputs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #2c3e50;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            box-sizing: border-box;
+            background: rgba(217, 217, 217, 0.58);
+            border: 1px solid white;
+            box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(6px);
+            border-radius: 17px;
+            cursor: pointer;
+            transition: all 0.5s;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            border-color: #333;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .card p {
+            padding: 10px 15px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .card p strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #fff;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #f00;
+        }
+
+        @media (max-width: 600px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Project Outputs - Customer Churn Prediction</h2>
+    
+    <div class="card-container">
+        <div class="card" onclick="openModal('static/heatmap.png')">
+            <img src="{{ url_for('static', filename='heatmap.png') }}" alt="Correlation Heatmap" />
+            <p>
+                <strong>Correlation Heatmap</strong>
+                Visualizes the correlation between different features to identify which ones are strongly related to churn.
+            </p>
+        </div>
+        <div class="card" onclick="openModal('static/decision_tree_plot.png')">
+            <img src="{{ url_for('static', filename='decision_tree_plot.png') }}" alt="Decision Tree" />
+            <p>
+                <strong>Decision Tree Visualization</strong>
+                Shows the path of decision rules used by the model to predict if a customer will churn or not.
+            </p>
+        </div>
+        <div class="card" onclick="openModal('static/page_views_distribution.png')">
+            <img src="{{ url_for('static', filename='page_views_distribution.png') }}" alt="Page Views Distribution" />
+            <p>
+                <strong>Page Views Distribution</strong>
+                Displays how frequently users visit pages, helping identify patterns in customer activity.
+            </p>
+        </div>
+        <div class="card" onclick="openModal('static/Spent_time_distribution.png')">
+            <img src="{{ url_for('static', filename='Spent_time_distribution.png') }}" alt="Time Spent Distribution" />
+            <p>
+                <strong>Time Spent on Website</strong>
+                Analyzes how much time users spend on the site, which can correlate with their level of interest or dissatisfaction.
+            </p>
+        </div>
+        <div class="card" onclick="openModal('static/feature_importance_chart_tree.png')">
+            <img src="{{ url_for('static', filename='feature_importance_chart_tree.png') }}" alt="Feature Importance" />
+            <p>
+                <strong>Feature Importance Chart</strong>
+                Highlights the most impactful features used by the model to make predictions about customer churn.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imgPath) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgPath;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Optional: close modal on click outside image
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>
